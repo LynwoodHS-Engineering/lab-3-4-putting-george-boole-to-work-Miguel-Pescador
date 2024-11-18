@@ -7,18 +7,18 @@ int y;
 void setup()
 {
     // Set up the LED pin
-    pinMode (6,);
+    pinMode (6, OUTPUT);
     
     // Fade LED from 0 to full power over one second
-    for (y = 0; y < 256; ){
-        analogWrite (, y);
-        delay ();
+    for (int y = 0; y <= 255;y=y+1 ){
+        analogWrite (6, y);
+        delay (5);
     }
     
     // Fade LED from full power to 0 over one second
     for (y = 255; y >= 0; y = y - 1){
-        analogWrite (, y);
-        delay ();
+        analogWrite (6, y);
+        delay (5);
     }
 
 }
